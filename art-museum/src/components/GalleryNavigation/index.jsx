@@ -1,7 +1,11 @@
+import { useParams } from "react-router";
 import { NavLink } from "react-router-dom";
 import Gallery from "../Gallery";
+import './GalleryNavigation.css'
+
 
 function GalleryNavigation (props) {
+    console.log('props: ', props)
 
     const records = props.art.records;
     console.log(records);
