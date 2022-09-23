@@ -2,7 +2,8 @@ import harvardArt from "./data/harvardArt";
 import GalleryNavigation  from "./components/GalleryNavigation";
 import { Route, Switch } from 'react-router-dom'
 import GalleryView from "./components/GalleryView";
-import Errors from "./components/Error";
+import Errors from "./components/Errors";
+import { Redirect } from "react-router-dom";
 
 function App() {
   return (
@@ -10,8 +11,11 @@ function App() {
     <div className="pageWrapper">
      <Switch>
         < Route path="/galleries/:galleryId" component={GalleryView}/>
+
+
         < Route path="/" component={() => <GalleryNavigation art={harvardArt}/>}/>
-        < Route path="*" component={<Errors/>} />
+
+        {console.log('past errors')}
       </Switch>
     </div>
   );

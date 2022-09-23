@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import harvardArt from "../../data/harvardArt";
+import ArtImageTile from "../ArtImageTile";
 
 function GalleryView() {
     let { galleryId } = useParams()
@@ -16,13 +17,14 @@ function GalleryView() {
     }
 
 
-
-
     // console.log('galID: ', galleryId)
     return(
         <div>
         <h1>{gallery.name} </h1>    
         <p>{gallery.labeltext}</p>        
+        {ArtImageTile(gallery.url)}
+
+        
         </div>
     )
 }
