@@ -1,4 +1,3 @@
-import { useParams } from "react-router";
 import { NavLink } from "react-router-dom";
 import Gallery from "../Gallery";
 import './GalleryNavigation.css'

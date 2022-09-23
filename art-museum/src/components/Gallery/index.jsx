@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 function Gallery (props) {
 
-    const link = `/galleries/:${props.id}`
+    const link = `/galleries/${props.id}`
 
     return (
         
